@@ -1,0 +1,20 @@
+/* Skeleton */
+.weather-skeleton { display:grid; gap:8px; }
+.weather-skeleton .bar { height:14px; background:#eee; border-radius:8px; }
+.weather-skeleton .bar.short { width:40%; }
+
+/* Card */
+.weather-card {
+  display:grid;
+  gap:6px;
+  padding:12px 14px;
+  border:1px solid #e9e9e9;
+  border-radius:12px;
+  background:#fafafa;
+}
+.weather-city { font-weight:600; }
+.weather-temp { font-size:28px; line-height:1.2; }
+.weather-cond { color:#555; }
+
+/* Error */
+.weather-error { color:#b00020; padding:8px 0; }
