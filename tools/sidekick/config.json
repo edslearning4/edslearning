@@ -10,7 +10,7 @@
       "includePaths": ["**.docx**"],
       "passConfig": true,
       "passReferrer": true,
-      "paletteRect": "top:50px;right:10px;width:400px;height:calc(100vh - 60px)"
+      "paletteRect": "top:50px;right:10px;width:600px;height:calc(100vh - 60px)"
     },
     {
       "id": "google-assist",
