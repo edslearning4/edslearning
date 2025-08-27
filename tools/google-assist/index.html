@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Google Assist</title>
+    <style>
+        body { font-family: system-ui, Arial, sans-serif; margin: 0; padding: 12px; }
+        h1 { font-size: 16px; margin: 0 0 8px; }
+        .row { display: flex; gap: 8px; margin: 8px 0; }
+        input[type="search"] { flex: 1; padding: 8px; border: 1px solid #ccc; border-radius: 8px; }
+        button, a.btn { padding: 8px 12px; border: 1px solid #ccc; border-radius: 8px; background: #fff; cursor: pointer; text-decoration: none; display: inline-block; }
+        small { color:#666; display:block; margin-top:6px; line-height:1.3; }
+        ul { padding-left: 18px; margin: 8px 0; }
+    </style>
+</head>
+<body>
+<h1>Google Assist</h1>
+<div class="row">
+    <input id="q" type="search" placeholder="Search Google…" />
+    <button id="go">Search</button>
+</div>
+<small id="ref"></small>
+
+<ul>
+    <li><a class="btn" target="_blank" href="https://www.google.com/search?q=Edge+Delivery+Services+Adobe">EDS docs</a></li>
+    <li><a class="btn" target="_blank" href="https://www.google.com/search?q=AEM+Universal+Editor">Universal Editor</a></li>
+    <li><a class="btn" target="_blank" href="https://www.google.com/search?q=AEM+EDS+block+authoring">Block authoring</a></li>
+</ul>
+
+<script>
+    // show the referring page (Sidekick adds ?ref=... when passReferrer=true)
+    const params = new URLSearchParams(location.search);
+    const ref = params.get('ref');
+    if (ref) document.getElementById('ref').textContent = `From: ${ref}`;
+
+    const q = document.getElementById('q');
+    const go = document.getElementById('go');
+
+    // convenience: prefill with selected text if Sidekick ever passes it via ?q=
+    const preset = params.get('q');
+    if (preset) q.value = preset;
+
+    function search() {
+      const term = q.value.trim();
+      if (!term) return;
+      window.open(`https://www.google.com/search?q=${encodeURIComponent(term)}`, '_blank', 'noopener');
+    }
+
+    q.addEventListener('keydown', (e) => { if (e.key === 'Enter') search(); });
+    go.addEventListener('click', search);
+</script>
+</body>
+</html>

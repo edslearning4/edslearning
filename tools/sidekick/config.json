@@ -10,16 +10,14 @@
       "includePaths": ["**.docx**"],
       "passConfig": true,
       "passReferrer": true,
-      "paletteRect": "top:50px;right:10px;width:800px;height:calc(100vh - 60px)"
+      "paletteRect": "top:50px;right:10px;width:400px;height:calc(100vh - 60px)"
     },
     {
       "id": "google-assist",
       "title": "Google Assist",
       "environments": ["any"],
-      "url": "https://www.google.com/search?q=edge+delivery+services",
+      "url": "/tools/google-assist/index.html",
       "isPalette": true,
-      "passConfig": true,
-      "passReferrer": true,
       "paletteRect": "top:50px;right:10px;width:400px;height:calc(100vh - 60px)"
     }
   ]
