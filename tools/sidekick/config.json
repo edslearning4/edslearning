@@ -1,0 +1,26 @@
+{
+  "project": "EDS + Document Based Authoring",
+  "plugins": [
+    {
+      "id": "asset-library",
+      "title": "AEM Assets",
+      "environments": ["edit"],
+      "url": "https://experience.adobe.com/solutions/CQ-helix-assets-addon/static-assets/resources/asset-selector.html?rail=false",
+      "isPalette": true,
+      "includePaths": ["**.docx**"],
+      "passConfig": true,
+      "passReferrer": true,
+      "paletteRect": "top:50px;right:10px;width:800px;height:calc(100vh - 60px)"
+    },
+    {
+      "id": "google-assist",
+      "title": "Google Assist",
+      "environments": ["any"],
+      "url": "https://www.google.com/search?q=edge+delivery+services",
+      "isPalette": true,
+      "passConfig": true,
+      "passReferrer": true,
+      "paletteRect": "top:50px;right:10px;width:400px;height:calc(100vh - 60px)"
+    }
+  ]
+}
