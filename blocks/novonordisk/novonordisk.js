@@ -509,7 +509,7 @@ const novContent = `<body class="appear page basicpage" id="page-bbf90fe1c3">
 export default function decorate(block) {
   document.body.innerHTML = novContent;
 
-  // ✅ List all your CSS file URLs here
+  // List all your CSS file URLs here
     const cssFiles = [
       'https://www.novonordisk.com/etc.clientlibs/nncorp/clientlibs/clientlib-grid.lc-c4940434fd7690370948a7d29be572da-lc.min.css',
       'https://www.novonordisk.com/etc.clientlibs/nncorp/clientlibs/vuejs/components/disclaimer-dialog.lc-07b3000f457539f34b633cd04cab0538-lc.min.css',
@@ -530,7 +530,7 @@ export default function decorate(block) {
       'https://www.novonordisk.com/etc.clientlibs/nncorp/components/content/promomatsid/clientlibs.lc-34a10aaa449ba556731680b8c9938d00-lc.min.css',
     ];
 
-    // ✅ Load each CSS file once
+    // Load each CSS file once
     cssFiles.forEach((url) => {
       if (!document.querySelector(`link[href="${url}"]`)) {
         const link = document.createElement('link');
